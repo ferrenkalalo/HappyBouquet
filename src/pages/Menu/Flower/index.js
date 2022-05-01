@@ -3,6 +3,7 @@ import React from 'react';
 import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import ButtomNav from '../../../components/molecules/ButtomNav';
+import WhiteContainer from '../../../components/molecules/WhiteContainer';
 
 const BouquetFlower = ({navigation}) => {
   return (
@@ -14,44 +15,12 @@ const BouquetFlower = ({navigation}) => {
       />
       <Gap height={40} />
       <View style={styles.container}>
-        <View>
-          <View style={styles.whitebox}>
-            <View style={styles.textWrapper}>
-              <Text style={styles.title}>GREEN FLOWER</Text>
-              <Text style={styles.subtitle}>descriptions...</Text>
-            </View>
-          </View>
-          <Gap height={25} />
-
-          <View style={styles.whitebox}>
-            <View style={styles.textWrapper}>
-              <Text style={styles.title}>WHITE FLOWER</Text>
-              <Text style={styles.subtitle}>descriptions...</Text>
-            </View>
-          </View>
-          <Gap height={25} />
-
-          <View style={styles.whitebox}>
-            <View style={styles.textWrapper}>
-              <Text style={styles.title}>YELLOW FLOWER</Text>
-              <Text style={styles.subtitle}>descriptions...</Text>
-            </View>
-          </View>
-          <Gap height={25} />
-
-          <View style={styles.whitebox}>
-            <View style={styles.textWrapper}>
-              <Text style={styles.title}>RED FLOWER</Text>
-              <Text style={styles.subtitle}>descriptions...</Text>
-            </View>
-          </View>
-          <Gap height={25} />
-        </View>
+        <WhiteContainer title={'GREEN FLOWER'} />
+        <WhiteContainer title={'WHITE FLOWER'} />
+        <WhiteContainer title={'YELLOW FLOWER'} />
+        <WhiteContainer title={'RED FLOWER'} />
       </View>
-      {/* <View style={styles.bar}>
-        <Text>-</Text>
-      </View> */}
-      <ButtomNav />
+      <ButtomNav onPressed={() => navigation.navigate('HomePage')} />
     </View>
     // </ScrollView>
   );
@@ -72,29 +41,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 30,
     justifyContent: 'center',
-  },
-  whitebox: {
-    backgroundColor: '#F6F6F6',
-    borderRadius: 20,
-    width: 320,
-    height: 107,
-  },
-  textWrapper: {
-    alignItems: 'flex-end',
-    paddingRight: 20,
-    paddingTop: 20,
-  },
-  title: {
-    color: 'black',
-    fontSize: 17,
-  },
-  subtitle: {
-    paddingTop: 20,
-    color: 'grey',
-    fontSize: 16,
-  },
-  bar: {
-    flex: 0.12,
-    backgroundColor: '#F6F6F6',
   },
 });
