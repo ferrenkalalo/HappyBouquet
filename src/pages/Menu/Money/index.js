@@ -1,9 +1,9 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, ScrollView} from 'react-native';
 import React from 'react';
 import WhiteContainer from '../../../components/molecules/WhiteContainer';
 import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
-import ButtomNav from '../../../components/molecules/ButtomNav';
+import BottomNav from '../../../components/molecules/BottomNav';
 
 const BouquetMoney = ({navigation}) => {
   return (
@@ -12,14 +12,23 @@ const BouquetMoney = ({navigation}) => {
         onPress={() => navigation.navigate('HomePage')}
         title={'BOUQUET MONEY'}
       />
-      <Gap height={40} />
+      <Gap height={15} />
       <View style={styles.container}>
-        <WhiteContainer title={'Pecahan Rp. 10.000'} />
-        <WhiteContainer title={'Pecahan Rp. 20.000'} />
-        <WhiteContainer title={'Pecahan Rp. 50.000'} />
-        <WhiteContainer title={'Pecahan Rp. 100.000'} />
+        <ScrollView>
+          <WhiteContainer title={'Pecahan Rp. 10.000'} />
+          <WhiteContainer title={'Pecahan Rp. 20.000'} />
+          <WhiteContainer title={'Pecahan Rp. 50.000'} />
+          <WhiteContainer title={'Pecahan Rp. 100.000'} />
+          <WhiteContainer title={'Pecahan Rp. 10.000'} />
+          <WhiteContainer title={'Pecahan Rp. 20.000'} />
+          <WhiteContainer title={'Pecahan Rp. 50.000'} />
+          <WhiteContainer title={'Pecahan Rp. 100.000'} />
+        </ScrollView>
       </View>
-      <ButtomNav />
+      <BottomNav
+        onPressed={() => navigation.navigate('HomePage')}
+        title={'MONEY'}
+      />
     </View>
   );
 };

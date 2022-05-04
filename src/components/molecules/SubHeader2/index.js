@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   page: {
     backgroundColor: '#F6F6F6',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
   },
   container: {
     backgroundColor: '#F6F6F6',

@@ -11,6 +11,7 @@
     "emulator": "emulator -avd Pixel_2_XL_API_29"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.1",
     "and": "^0.0.3",

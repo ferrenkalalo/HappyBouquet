@@ -1,22 +1,39 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const BottomNav = ({onPressed}) => {
+const BottomNav = ({
+  navigation,
+  onPressed,
+  onPressed1,
+  onPressed2,
+  onPressed3,
+  title,
+}) => {
   return (
     <View style={styles.container}>
+      <TouchableOpacity onPress={onPressed}>
+        <Text>{title}</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity
-        //onPress={() => navigation.navigate('BouquetFlower')}
-        onPress={onPressed}>
-        <Text>BottomNav</Text>
+        onPress={onPressed1}
+        //onPress={() => navigation.navigate('Ribbons')}
+      >
+        <Text>RIBBONS</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Text>BottomNav</Text>
+
+      <TouchableOpacity
+        onPress={onPressed2}
+        //onPress={() => navigation.navigate('Pappers')}
+      >
+        <Text>PAPPERS</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Text>BottomNav</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text>BottomNav</Text>
+
+      <TouchableOpacity
+        onPress={onPressed3}
+        //onPress={() => navigation.navigate('Card')}
+      >
+        <Text>CARD</Text>
       </TouchableOpacity>
     </View>
   );

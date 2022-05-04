@@ -12,12 +12,14 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import BottomTabNav from './components/molecules/BottomTabNav';
 import Routers from './routers';
 
 const App = () => {
   return (
     <NavigationContainer>
       <Routers />
+      {/* <BottomTabNav /> */}
     </NavigationContainer>
   );
 };

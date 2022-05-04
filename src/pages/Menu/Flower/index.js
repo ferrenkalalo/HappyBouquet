@@ -2,27 +2,37 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
-import ButtomNav from '../../../components/molecules/ButtomNav';
+import BottomNav from '../../../components/molecules/BottomNav';
 import WhiteContainer from '../../../components/molecules/WhiteContainer';
+import BottomTabNav from '../../../components/molecules/BottomTabNav';
 
 const BouquetFlower = ({navigation}) => {
   return (
-    // <ScrollView style={styles.page}>
     <View style={styles.page}>
       <SubHeader2
         onPress={() => navigation.navigate('HomePage')}
         title={'BOUQUET FLOWER'}
       />
-      <Gap height={40} />
+      <Gap height={15} />
       <View style={styles.container}>
-        <WhiteContainer title={'GREEN FLOWER'} />
-        <WhiteContainer title={'WHITE FLOWER'} />
-        <WhiteContainer title={'YELLOW FLOWER'} />
-        <WhiteContainer title={'RED FLOWER'} />
+        <ScrollView showsHorizontalScrollIndicator={false}>
+          <WhiteContainer title={'GREEN FLOWER'} />
+          <WhiteContainer title={'WHITE FLOWER'} />
+          <WhiteContainer title={'YELLOW FLOWER'} />
+          <WhiteContainer title={'RED FLOWER'} />
+          <WhiteContainer title={'BLACK FLOWER'} />
+          <WhiteContainer title={'PURPLE FLOWER'} />
+          <WhiteContainer title={'PINK FLOWER'} />
+        </ScrollView>
       </View>
-      <ButtomNav onPressed={() => navigation.navigate('HomePage')} />
+      <BottomNav
+        onPressed={() => navigation.navigate('HomePage')}
+        onPressed1={() => navigation.navigate('Ribbons')}
+        onPressed2={() => navigation.navigate('Pappers')}
+        onPressed3={() => navigation.navigate('Card')}
+        title={'FLOWERS'}
+      />
     </View>
-    // </ScrollView>
   );
 };
 

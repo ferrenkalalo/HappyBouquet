@@ -31,32 +31,9 @@ const Header = () => {
   };
   return (
     <View style={styles.container}>
-      <View style={styles.avatarWrapper}>
-        <View style={styles.border}>
-          <TouchableOpacity onPress={getPhoto} activeOpacity={0.7}>
-            {/* {!hasPhoto && (
-              <View style={styles.addPhoto}>
-                <Text style={styles.addPhotoText}>Add Photo</Text>
-              </View>
-            )}
-            {hasPhoto !== 0 && (
-              <Image source={{uri: photo}} style={styles.avatar} />
-            )} */}
-            {!hasPhoto && (
-              <View style={styles.addPhoto}>
-                <Text style={styles.addPhotoText}>Add Photo</Text>
-              </View>
-            )}
-            {hasPhoto !== 0 && (
-              <View>
-                <Image source={{uri: photo}} style={styles.avatar} />
-              </View>
-            )}
-          </TouchableOpacity>
-        </View>
-      </View>
-      {/* <Profile width="100" height="100" />
-      <Gap width={50} height={50} /> */}
+      {/* tambah disini itu yang da taru di wa 1:55PM */}
+      <Profile width="100" height="100" />
+      <Gap width={50} height={50} />
     </View>
   );
 };

@@ -11,6 +11,7 @@ import BouquetMoney from '../pages/Menu/Money';
 import Card from '../pages/SubMenu/Card';
 import Pappers from '../pages/SubMenu/Pappers';
 import Ribbons from '../pages/SubMenu/Ribbons';
+import Overall from '../pages/Overall';
 
 const Stack = createNativeStackNavigator();
 
@@ -70,6 +71,11 @@ const Routers = () => {
       <Stack.Screen
         name="Ribbons"
         component={Ribbons}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Overall"
+        component={Overall}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

@@ -2,27 +2,34 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
-import ButtomNav from '../../../components/molecules/ButtomNav';
+import BottomNav from '../../../components/molecules/BottomNav';
 import WhiteContainer from '../../../components/molecules/WhiteContainer';
 
 const BouquetCharacter = ({navigation}) => {
   return (
-    <ScrollView style={styles.page}>
-      <View>
-        <SubHeader2
-          onPress={() => navigation.navigate('HomePage')}
-          title={'BOUQUET CHARACTER'}
-        />
-        <Gap height={40} />
-        <View style={styles.container}>
+    <View style={styles.page}>
+      <SubHeader2
+        onPress={() => navigation.navigate('HomePage')}
+        title={'BOUQUET CHARACTER'}
+      />
+      <Gap height={15} />
+      <View style={styles.container}>
+        <ScrollView>
           <WhiteContainer title={'PATRICK STAR'} />
           <WhiteContainer title={'SPONGEBOB'} />
           <WhiteContainer title={'STITCH'} />
           <WhiteContainer title={'MICKEY MOUSE'} />
-        </View>
-        <ButtomNav />
+          <WhiteContainer title={'PATRICK STAR'} />
+          <WhiteContainer title={'SPONGEBOB'} />
+          <WhiteContainer title={'STITCH'} />
+          <WhiteContainer title={'MICKEY MOUSE'} />
+        </ScrollView>
       </View>
-    </ScrollView>
+      <BottomNav
+        onPressed={() => navigation.navigate('HomePage')}
+        title={'CHARCTER'}
+      />
+    </View>
   );
 };
 
