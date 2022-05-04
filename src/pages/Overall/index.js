@@ -4,7 +4,7 @@ import SubHeader2 from '../../components/molecules/SubHeader2';
 import WhiteContainer from '../../components/molecules/WhiteContainer';
 import Button from '../../components/atoms/Button';
 
-const Overall = () => {
+const Overall = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={styles.coantainer}>
@@ -19,7 +19,10 @@ const Overall = () => {
         <Text>Size L</Text>
       </View>
       <View style={styles.done}>
-        <Button title={'DONE'} />
+        <Button
+          title={'DONE'}
+          onPress={() => navigation.navigate('ThankyouPage')}
+        />
       </View>
     </View>
   );

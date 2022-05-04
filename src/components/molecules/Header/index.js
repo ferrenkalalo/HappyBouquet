@@ -6,33 +6,58 @@ import {launchImageLibrary} from 'react-native-image-picker';
 import {showMessage} from 'react-native-flash-message';
 
 const Header = () => {
-  const [photo, setPhoto] = useState('');
-  const [hasPhoto, setHasPhoto] = useState('');
+  // const [photo, setPhoto] = useState('');
+  // const [hasPhoto, setHasPhoto] = useState('');
 
+  // const getPhoto = async () => {
+  //   const result = await launchImageLibrary({
+  //     maxWidth: 100,
+  //     maxHeight: 100,
+  //     includeBase64: true,
+  //   });
+  //   if (result.didCancel) {
+  //     setHasPhoto(false);
+  //     showMessage({
+  //       message: 'Upload foto profil dibatalkan',
+  //       type: 'default',
+  //       backgroundColor: '#D9435E',
+  //       color: 'white',
+  //     });
+  //   } else {
+  //     setPhoto(result.assets[0].uri);
+  //     setHasPhoto(true);
+  //     console.log(result);
+  //   }
+  // };
+  const [photo, setPhoto] = useState('');
+  const [hasPhoto, setHasPhoto] = useState(false);
   const getPhoto = async () => {
     const result = await launchImageLibrary({
-      maxWidth: 100,
       maxHeight: 100,
+      maxWidth: 100,
       includeBase64: true,
     });
     if (result.didCancel) {
       setHasPhoto(false);
       showMessage({
-        message: 'Upload foto profil dibatalkan',
+        message: 'CANCELED!',
         type: 'default',
-        backgroundColor: '#D9435E',
-        color: 'white',
+        backgroundColor: '#FFC7C7',
+        color: 'black',
       });
     } else {
       setPhoto(result.assets[0].uri);
       setHasPhoto(true);
-      console.log(result);
     }
   };
+
   return (
     <View style={styles.container}>
+      <TouchableOpacity onPress={getPhoto}>
+        {!hasPhoto && <Profile width="100" height="100" />}
+        {hasPhoto && <Image source={{uri: photo}} style={styles.avatar} />}
+      </TouchableOpacity>
       {/* tambah disini itu yang da taru di wa 1:55PM */}
-      <Profile width="100" height="100" />
       <Gap width={50} height={50} />
     </View>
   );
@@ -62,9 +87,9 @@ const styles = StyleSheet.create({
     borderRadius: 90,
   },
   avatar: {
-    height: 90,
-    width: 90,
-    borderRadius: 90,
+    height: 100,
+    width: 100,
+    borderRadius: 100,
   },
   addPhotoText: {
     fontSize: 14,
@@ -75,9 +100,9 @@ const styles = StyleSheet.create({
   border: {
     borderWidth: 1,
     borderColor: '#8D92A3',
-    width: 110,
-    height: 110,
-    borderRadius: 110,
+    width: 120,
+    height: 120,
+    borderRadius: 120,
     alignItems: 'center',
     justifyContent: 'center',
     borderStyle: 'dashed',

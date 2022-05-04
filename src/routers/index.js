@@ -12,6 +12,7 @@ import Card from '../pages/SubMenu/Card';
 import Pappers from '../pages/SubMenu/Pappers';
 import Ribbons from '../pages/SubMenu/Ribbons';
 import Overall from '../pages/Overall';
+import ThankyouPage from '../pages/ThankyouPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -76,6 +77,11 @@ const Routers = () => {
       <Stack.Screen
         name="Overall"
         component={Overall}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ThankyouPage"
+        component={ThankyouPage}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

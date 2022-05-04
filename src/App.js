@@ -12,13 +12,14 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import BottomTabNav from './components/molecules/BottomTabNav';
 import Routers from './routers';
+import FlashMessage from 'react-native-flash-message';
 
 const App = () => {
   return (
     <NavigationContainer>
       <Routers />
+      <FlashMessage position="top" />
       {/* <BottomTabNav /> */}
     </NavigationContainer>
   );
