@@ -26,7 +26,7 @@ const BouquetCharacter = ({navigation}) => {
         </ScrollView>
       </View>
       <BottomNav
-        onPressed={() => navigation.navigate('HomePage')}
+        onPressed={() => navigation.navigate('BouquetCharacter')}
         title={'CHARCTER'}
       />
     </View>

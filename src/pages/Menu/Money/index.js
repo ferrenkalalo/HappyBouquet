@@ -26,7 +26,7 @@ const BouquetMoney = ({navigation}) => {
         </ScrollView>
       </View>
       <BottomNav
-        onPressed={() => navigation.navigate('HomePage')}
+        onPressed={() => navigation.navigate('BouquetMoney')}
         title={'MONEY'}
       />
     </View>

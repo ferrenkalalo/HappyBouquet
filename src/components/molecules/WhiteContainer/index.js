@@ -1,15 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {StyleSheet, Text, View, CheckBox} from 'react-native';
+import React, {useState} from 'react';
 import Gap from '../../atoms/Gap';
+import Tester from '../../../pages/TESTER';
 
 const WhiteContainer = ({title}) => {
   return (
     <View>
-      <View style={styles.whitebox}>
-        <View style={styles.textWrapper}>
-          <Text style={styles.title}>{title}</Text>
-          <Text style={styles.subtitle}>descriptions...</Text>
+      <View style={styles.page}>
+        <View style={styles.whitebox}>
+          <View style={styles.textWrapper}>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.subtitle}>descriptions...</Text>
+          </View>
         </View>
+        <Tester />
       </View>
       <Gap height={25} />
     </View>
@@ -19,6 +23,10 @@ const WhiteContainer = ({title}) => {
 export default WhiteContainer;
 
 const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   whitebox: {
     backgroundColor: '#F6F6F6',
     borderRadius: 20,

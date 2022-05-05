@@ -1,10 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+import {StyleSheet, View, TextInput} from 'react-native';
 import React from 'react';
 import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
@@ -32,8 +26,10 @@ const Card = ({navigation}) => {
         <Button title={'DONE'} onPress={() => navigation.navigate('Overall')} />
       </View>
       <BottomNav
-        onPressed={() => navigation.navigate('HomePage')}
-        title={'CHARCTER'}
+        onPressed={() => {
+          navigation.goBack();
+        }}
+        title={'BACK'}
       />
     </View>
   );

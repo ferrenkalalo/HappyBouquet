@@ -26,8 +26,10 @@ const Pappers = ({navigation}) => {
         </ScrollView>
       </View>
       <BottomNav
-        onPressed={() => navigation.navigate('HomePage')}
-        title={'CHARCTER'}
+        onPressed={() => {
+          navigation.goBack();
+        }}
+        title={'BACK'}
       />
     </View>
   );

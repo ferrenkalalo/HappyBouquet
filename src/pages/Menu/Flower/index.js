@@ -26,7 +26,7 @@ const BouquetFlower = ({navigation}) => {
         </ScrollView>
       </View>
       <BottomNav
-        onPressed={() => navigation.navigate('HomePage')}
+        onPressed={() => navigation.navigate('BouquetFlower')}
         onPressed1={() => navigation.navigate('Ribbons')}
         onPressed2={() => navigation.navigate('Pappers')}
         onPressed3={() => navigation.navigate('Card')}
