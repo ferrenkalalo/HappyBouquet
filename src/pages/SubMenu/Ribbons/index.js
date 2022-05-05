@@ -4,6 +4,12 @@ import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import BottomNav from '../../../components/molecules/BottomNav';
 import WhiteContainer from '../../../components/molecules/WhiteContainer';
+import {
+  GreenRibbon,
+  WhiteRibbon,
+  BlackRibbon,
+  RedRibbon,
+} from '../../../assets/images';
 
 const Ribbons = ({navigation}) => {
   return (
@@ -15,14 +21,14 @@ const Ribbons = ({navigation}) => {
       <Gap height={15} />
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <WhiteContainer title={'GREEN RIBBON'} />
-          <WhiteContainer title={'WHITE RIBBON'} />
-          <WhiteContainer title={'BLACK RIBBON'} />
-          <WhiteContainer title={'RED RIBBON'} />
-          <WhiteContainer title={'PINK RIBBON'} />
-          <WhiteContainer title={'YELLOW RIBBON'} />
-          <WhiteContainer title={'PURPLE RIBBON'} />
-          <WhiteContainer title={'BLUE RIBBON'} />
+          <WhiteContainer title={'GREEN RIBBON'} image={GreenRibbon} />
+          <WhiteContainer title={'WHITE RIBBON'} image={WhiteRibbon} />
+          <WhiteContainer title={'BLACK RIBBON'} image={BlackRibbon} />
+          <WhiteContainer title={'RED RIBBON'} image={RedRibbon} />
+          <WhiteContainer title={'GREEN RIBBON'} image={GreenRibbon} />
+          <WhiteContainer title={'WHITE RIBBON'} image={WhiteRibbon} />
+          <WhiteContainer title={'BLACK RIBBON'} image={BlackRibbon} />
+          <WhiteContainer title={'RED RIBBON'} image={RedRibbon} />
         </ScrollView>
       </View>
       <BottomNav

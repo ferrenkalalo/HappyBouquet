@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import Gap from '../../atoms/Gap';
 
-const PinkContainer = ({onPressed, title, color = '#FFE2E2'}) => {
+const PinkContainer = ({onPressed, title, color = '#FFE2E2', image}) => {
   return (
     <View>
       <TouchableOpacity onPress={onPressed} activeOpacity={0.9}>
@@ -11,6 +11,7 @@ const PinkContainer = ({onPressed, title, color = '#FFE2E2'}) => {
             <Text style={styles.text}>{title}</Text>
             <Text>Start from 75k</Text>
           </View>
+          <Image source={image} style={styles.image} />
         </View>
       </TouchableOpacity>
       <Gap height={40} />
@@ -25,17 +26,22 @@ const styles = StyleSheet.create({
     height: 170,
     width: 320,
     backgroundColor: color,
-    justifyContent: 'center',
     borderRadius: 15,
     elevation: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
   }),
   TextWrapper: {
     width: 160,
-    padding: 15,
+    padding: 20,
   },
   text: {
     color: 'black',
     fontSize: 20,
     marginBottom: 5,
+  },
+  image: {
+    height: 150,
+    width: 151,
   },
 });

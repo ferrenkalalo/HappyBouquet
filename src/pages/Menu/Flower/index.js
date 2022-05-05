@@ -4,6 +4,12 @@ import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import BottomNav from '../../../components/molecules/BottomNav';
 import WhiteContainer from '../../../components/molecules/WhiteContainer';
+import {
+  WhiteFlower,
+  GreenFlower,
+  YellowFlower,
+  RedFlower,
+} from '../../../assets/images';
 import Tester from '../../TESTER';
 
 const BouquetFlower = ({navigation}) => {
@@ -16,13 +22,14 @@ const BouquetFlower = ({navigation}) => {
       <Gap height={15} />
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <WhiteContainer title={'GREEN FLOWER'} />
-          <WhiteContainer title={'WHITE FLOWER'} />
-          <WhiteContainer title={'YELLOW FLOWER'} />
-          <WhiteContainer title={'RED FLOWER'} />
-          <WhiteContainer title={'BLACK FLOWER'} />
-          <WhiteContainer title={'PURPLE FLOWER'} />
-          <WhiteContainer title={'PINK FLOWER'} />
+          <WhiteContainer title={'GREEN FLOWER'} image={GreenFlower} />
+          <WhiteContainer title={'WHITE FLOWER'} image={WhiteFlower} />
+          <WhiteContainer title={'YELLOW FLOWER'} image={YellowFlower} />
+          <WhiteContainer title={'RED FLOWER'} image={RedFlower} />
+          <WhiteContainer title={'GREEN FLOWER'} image={GreenFlower} />
+          <WhiteContainer title={'WHITE FLOWER'} image={WhiteFlower} />
+          <WhiteContainer title={'YELLOW FLOWER'} image={YellowFlower} />
+          <WhiteContainer title={'RED FLOWER'} image={RedFlower} />
         </ScrollView>
       </View>
       <BottomNav

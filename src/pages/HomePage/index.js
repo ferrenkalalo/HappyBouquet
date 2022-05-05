@@ -3,6 +3,12 @@ import React from 'react';
 import SubHeader from '../../components/molecules/SubHeader';
 import Gap from '../../components/atoms/Gap';
 import PinkContainer from '../../components/molecules/PinkContainer';
+import {
+  DefaultImage,
+  BouquetFlower,
+  BouquetCharacter,
+  BouquetMoney,
+} from '../../assets/images';
 
 const HomePage = ({navigation}) => {
   return (
@@ -13,15 +19,18 @@ const HomePage = ({navigation}) => {
         <PinkContainer
           onPressed={() => navigation.navigate('BouquetFlower')}
           title={'BOUQUET FLOWER'}
+          image={BouquetFlower}
         />
         <PinkContainer
           onPressed={() => navigation.navigate('BouquetCharacter')}
           title={'BOUQUET CHARACTER'}
           color={'#FFC7C7'}
+          image={BouquetCharacter}
         />
         <PinkContainer
           onPressed={() => navigation.navigate('BouquetMoney')}
           title={'BOUQUET MONEY'}
+          image={BouquetMoney}
         />
       </View>
     </View>

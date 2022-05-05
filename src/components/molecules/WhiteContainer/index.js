@@ -1,19 +1,22 @@
-import {StyleSheet, Text, View, CheckBox} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text, View, Image} from 'react-native';
+import React from 'react';
 import Gap from '../../atoms/Gap';
 import Tester from '../../../pages/TESTER';
 
-const WhiteContainer = ({title}) => {
+const WhiteContainer = ({title, image}) => {
   return (
     <View>
       <View style={styles.page}>
         <View style={styles.whitebox}>
+          <View style={styles.image}>
+            <Image source={image} />
+          </View>
           <View style={styles.textWrapper}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.subtitle}>descriptions...</Text>
           </View>
         </View>
-        {/* <Tester /> */}
+        <Tester />
       </View>
       <Gap height={25} />
     </View>
@@ -28,6 +31,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   whitebox: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
     backgroundColor: '#F6F6F6',
     borderRadius: 20,
     width: 320,
@@ -35,7 +41,7 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     alignItems: 'flex-end',
-    paddingRight: 20,
+    paddingRight: 10,
     paddingTop: 20,
   },
   title: {
@@ -46,5 +52,10 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     color: 'grey',
     fontSize: 16,
+  },
+  image: {
+    height: 90,
+    width: 90,
+    paddingTop: 7,
   },
 });

@@ -4,6 +4,12 @@ import WhiteContainer from '../../../components/molecules/WhiteContainer';
 import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import BottomNav from '../../../components/molecules/BottomNav';
+import {
+  Pecahan10,
+  Pecahan20,
+  Pecahan50,
+  Pecahan100,
+} from '../../../assets/images';
 
 const BouquetMoney = ({navigation}) => {
   return (
@@ -15,14 +21,14 @@ const BouquetMoney = ({navigation}) => {
       <Gap height={15} />
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <WhiteContainer title={'Pecahan Rp. 10.000'} />
-          <WhiteContainer title={'Pecahan Rp. 20.000'} />
-          <WhiteContainer title={'Pecahan Rp. 50.000'} />
-          <WhiteContainer title={'Pecahan Rp. 100.000'} />
-          <WhiteContainer title={'Pecahan Rp. 10.000'} />
-          <WhiteContainer title={'Pecahan Rp. 20.000'} />
-          <WhiteContainer title={'Pecahan Rp. 50.000'} />
-          <WhiteContainer title={'Pecahan Rp. 100.000'} />
+          <WhiteContainer title={'Pecahan Rp. 10.000'} image={Pecahan10} />
+          <WhiteContainer title={'Pecahan Rp. 20.000'} image={Pecahan20} />
+          <WhiteContainer title={'Pecahan Rp. 50.000'} image={Pecahan50} />
+          <WhiteContainer title={'Pecahan Rp. 100.000'} image={Pecahan100} />
+          <WhiteContainer title={'Pecahan Rp. 10.000'} image={Pecahan10} />
+          <WhiteContainer title={'Pecahan Rp. 20.000'} image={Pecahan20} />
+          <WhiteContainer title={'Pecahan Rp. 50.000'} image={Pecahan50} />
+          <WhiteContainer title={'Pecahan Rp. 100.000'} image={Pecahan100} />
         </ScrollView>
       </View>
       <BottomNav

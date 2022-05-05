@@ -4,6 +4,12 @@ import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import BottomNav from '../../../components/molecules/BottomNav';
 import WhiteContainer from '../../../components/molecules/WhiteContainer';
+import {
+  BlackPapper,
+  BluePapper,
+  PinkPapper,
+  PurplePapper,
+} from '../../../assets/images';
 
 const Pappers = ({navigation}) => {
   return (
@@ -15,14 +21,14 @@ const Pappers = ({navigation}) => {
       <Gap height={15} />
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <WhiteContainer title={'GREEN PAPPERS'} />
-          <WhiteContainer title={'WHITE PAPPERS'} />
-          <WhiteContainer title={'BLACK PAPPERS'} />
-          <WhiteContainer title={'RED PAPPERS'} />
-          <WhiteContainer title={'PINK PAPPERS'} />
-          <WhiteContainer title={'YELLOW PAPPERS'} />
-          <WhiteContainer title={'PURPLE PAPPERS'} />
-          <WhiteContainer title={'BLUE PAPPERS'} />
+          <WhiteContainer title={'BLACK PAPPERS'} image={BlackPapper} />
+          <WhiteContainer title={'BLUE PAPPERS'} image={BluePapper} />
+          <WhiteContainer title={'PINK PAPPERS'} image={PinkPapper} />
+          <WhiteContainer title={'PURPLE PAPPERS'} image={PurplePapper} />
+          <WhiteContainer title={'BLACK PAPPERS'} image={BlackPapper} />
+          <WhiteContainer title={'BLUE PAPPERS'} image={BluePapper} />
+          <WhiteContainer title={'PINK PAPPERS'} image={PinkPapper} />
+          <WhiteContainer title={'PURPLE PAPPERS'} image={PurplePapper} />
         </ScrollView>
       </View>
       <BottomNav

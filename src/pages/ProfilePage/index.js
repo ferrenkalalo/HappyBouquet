@@ -3,8 +3,23 @@ import React from 'react';
 import SubHeader2 from '../../components/molecules/SubHeader2';
 import {Profile} from '../../assets';
 import Gap from '../../components/atoms/Gap';
+import Button from '../../components/atoms/Button';
+import {authentication} from '../../config/Firebase';
+import {signOut} from 'firebase/auth';
 
 const ProfilePage = ({navigation}) => {
+  const SignOutUser = () => {
+    signOut(authentication)
+      .then(re => {
+        console.log(re);
+        navigation.navigate('SignIn');
+        alert('You are signed out');
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
   return (
     <View style={styles.page}>
       <SubHeader2
@@ -28,6 +43,8 @@ const ProfilePage = ({navigation}) => {
             <Text style={styles.text}>Address: Madidir - Bitung</Text>
           </View>
         </View>
+        <Gap height={50} />
+        <Button title={'SIGN OUT'} onPress={SignOutUser} />
       </View>
     </View>
   );

@@ -39,11 +39,7 @@ const SignIn = ({navigation}) => {
         onChangeText={text => setPassword(text)}
       />
       <Gap height={40} />
-      <Button
-        title={'SIGN IN'}
-        //onPress={() => navigation.navigate('HomePage')}
-        onPress={SignInUser}
-      />
+      <Button title={'SIGN IN'} onPress={SignInUser} />
       <Gap height={30} />
 
       <Button
@@ -61,7 +57,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F6F6F6',
-    // justifyContent: 'center',
-    // alignItems: 'center',
   },
 });
