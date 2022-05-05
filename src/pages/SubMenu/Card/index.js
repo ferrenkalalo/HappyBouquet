@@ -3,7 +3,6 @@ import React from 'react';
 import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import BottomNav from '../../../components/molecules/BottomNav';
-import WhiteContainer from '../../../components/molecules/WhiteContainer';
 import Button from '../../../components/atoms/Button';
 
 const Card = ({navigation}) => {

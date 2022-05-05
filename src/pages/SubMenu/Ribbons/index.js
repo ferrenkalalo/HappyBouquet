@@ -14,7 +14,7 @@ const Ribbons = ({navigation}) => {
       />
       <Gap height={15} />
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <WhiteContainer title={'GREEN RIBBON'} />
           <WhiteContainer title={'WHITE RIBBON'} />
           <WhiteContainer title={'BLACK RIBBON'} />

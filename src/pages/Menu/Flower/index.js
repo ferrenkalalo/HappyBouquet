@@ -4,7 +4,7 @@ import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import BottomNav from '../../../components/molecules/BottomNav';
 import WhiteContainer from '../../../components/molecules/WhiteContainer';
-import BottomTabNav from '../../../components/molecules/BottomTabNav';
+import Tester from '../../TESTER';
 
 const BouquetFlower = ({navigation}) => {
   return (
@@ -15,7 +15,7 @@ const BouquetFlower = ({navigation}) => {
       />
       <Gap height={15} />
       <View style={styles.container}>
-        <ScrollView showsHorizontalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <WhiteContainer title={'GREEN FLOWER'} />
           <WhiteContainer title={'WHITE FLOWER'} />
           <WhiteContainer title={'YELLOW FLOWER'} />

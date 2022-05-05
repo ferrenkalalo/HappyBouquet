@@ -16,6 +16,7 @@
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.1",
     "and": "^0.0.3",
+    "firebase": "^9.7.0",
     "react": "17.0.2",
     "react-native": "0.68.0",
     "react-native-flash-message": "^0.2.1",

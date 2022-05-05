@@ -14,7 +14,7 @@ const BouquetCharacter = ({navigation}) => {
       />
       <Gap height={15} />
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <WhiteContainer title={'PATRICK STAR'} />
           <WhiteContainer title={'SPONGEBOB'} />
           <WhiteContainer title={'STITCH'} />

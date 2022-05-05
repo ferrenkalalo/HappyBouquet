@@ -14,7 +14,7 @@ const Pappers = ({navigation}) => {
       />
       <Gap height={15} />
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <WhiteContainer title={'GREEN PAPPERS'} />
           <WhiteContainer title={'WHITE PAPPERS'} />
           <WhiteContainer title={'BLACK PAPPERS'} />

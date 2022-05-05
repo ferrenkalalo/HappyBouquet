@@ -13,7 +13,7 @@ const WhiteContainer = ({title}) => {
             <Text style={styles.subtitle}>descriptions...</Text>
           </View>
         </View>
-        <Tester />
+        {/* <Tester /> */}
       </View>
       <Gap height={25} />
     </View>

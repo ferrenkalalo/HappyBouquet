@@ -14,7 +14,7 @@ const BouquetMoney = ({navigation}) => {
       />
       <Gap height={15} />
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <WhiteContainer title={'Pecahan Rp. 10.000'} />
           <WhiteContainer title={'Pecahan Rp. 20.000'} />
           <WhiteContainer title={'Pecahan Rp. 50.000'} />
