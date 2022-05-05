@@ -24,6 +24,14 @@ import BluePapper from './BluePapper.png';
 import BlackPapper from './BlackPapper.png';
 import PinkPapper from './PinkPapper.png';
 import PurplePapper from './PurplePapper.png';
+import CardNav from './CardNav.png';
+import PapperNav from './PaperNav.png';
+import RibbonNav from './RibbonNav.png';
+import FlowerNav from './FlowerNav.png';
+import CharacterNav from './CharacterNav.png';
+import MoneyNav from './MoneyNav.png';
+import NavF from './NavF.png';
+import BackIcon from './BackIcon.png';
 
 export {
   DefaultImage,
@@ -51,4 +59,12 @@ export {
   BlackPapper,
   PinkPapper,
   PurplePapper,
+  RibbonNav,
+  PapperNav,
+  CardNav,
+  FlowerNav,
+  CharacterNav,
+  MoneyNav,
+  NavF,
+  BackIcon,
 };

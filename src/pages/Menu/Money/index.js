@@ -9,6 +9,7 @@ import {
   Pecahan20,
   Pecahan50,
   Pecahan100,
+  MoneyNav,
 } from '../../../assets/images';
 
 const BouquetMoney = ({navigation}) => {
@@ -34,6 +35,7 @@ const BouquetMoney = ({navigation}) => {
       <BottomNav
         onPressed={() => navigation.navigate('BouquetMoney')}
         title={'MONEY'}
+        navImage={MoneyNav}
       />
     </View>
   );

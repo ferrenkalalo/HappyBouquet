@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import Gap from '../../atoms/Gap';
-import Tester from '../../../pages/TESTER';
+import CheckBoxes from '../../atoms/Checkbox';
 
 const WhiteContainer = ({title, image}) => {
   return (
@@ -16,7 +16,7 @@ const WhiteContainer = ({title, image}) => {
             <Text style={styles.subtitle}>descriptions...</Text>
           </View>
         </View>
-        <Tester />
+        <CheckBoxes />
       </View>
       <Gap height={25} />
     </View>

@@ -9,6 +9,7 @@ import {
   WhiteRibbon,
   BlackRibbon,
   RedRibbon,
+  BackIcon,
 } from '../../../assets/images';
 
 const Ribbons = ({navigation}) => {
@@ -36,6 +37,7 @@ const Ribbons = ({navigation}) => {
           navigation.goBack();
         }}
         title={'BACK'}
+        navImage={BackIcon}
       />
     </View>
   );

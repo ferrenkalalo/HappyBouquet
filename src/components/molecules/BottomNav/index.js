@@ -1,23 +1,28 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
+import {RibbonNav, PapperNav, CardNav} from '../../../assets/images';
 
-const BottomNav = ({navigation, onPressed, title}) => {
+const BottomNav = ({navigation, onPressed, title, navImage}) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onPressed}>
-        <Text>{title}</Text>
+        {/* <Text>{title}</Text> */}
+        <Image source={navImage} style={styles.imageNav} />
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate('Ribbons')}>
-        <Text>RIBBONS</Text>
+        {/* <Text>RIBBONS</Text> */}
+        <Image source={RibbonNav} style={styles.imageNav} />
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate('Pappers')}>
-        <Text>PAPPERS</Text>
+        {/* <Text>PAPPERS</Text> */}
+        <Image source={PapperNav} style={styles.imageNav} />
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate('Card')}>
-        <Text>CARD</Text>
+        {/* <Text>CARD</Text> */}
+        <Image source={CardNav} style={styles.imageNav} />
       </TouchableOpacity>
     </View>
   );
@@ -33,45 +38,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
     height: 60,
   },
+
+  imageNav: {
+    height: 45,
+    width: 45,
+  },
 });
-
-// import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-// import React from 'react';
-// import Card from '../../../pages/SubMenu/Card';
-// import Pappers from '../../../pages/SubMenu/Pappers';
-
-// const BottomNav = ({navigation, navigate, title, onPressed}) => {
-//   const Ribbons = () => navigation.navigate('Ribbons');
-
-//   return (
-//     <View style={styles.container}>
-//       <TouchableOpacity onPress={onPressed}>
-//         <Text>{title}</Text>
-//       </TouchableOpacity>
-//       <TouchableOpacity onPress={Ribbons}>
-//         <Text>RIBBONS</Text>
-//       </TouchableOpacity>
-
-//       <TouchableOpacity onPress={Pappers}>
-//         <Text>PAPPERS</Text>
-//       </TouchableOpacity>
-
-//       <TouchableOpacity onPress={Card}>
-//         <Text>CARD</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-// };
-
-// export default BottomNav;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     justifyContent: 'space-evenly',
-//     alignItems: 'center',
-//     flexDirection: 'row',
-//     backgroundColor: '#F6F6F6',
-//     width: 400,
-//     height: 60,
-//   },
-// });

@@ -9,6 +9,7 @@ import {
   PatrickStar,
   Stitch,
   MickeyMouse,
+  CharacterNav,
 } from '../../../assets/images';
 
 const BouquetCharacter = ({navigation}) => {
@@ -34,6 +35,7 @@ const BouquetCharacter = ({navigation}) => {
       <BottomNav
         onPressed={() => navigation.navigate('BouquetCharacter')}
         title={'CHARCTER'}
+        navImage={CharacterNav}
       />
     </View>
   );

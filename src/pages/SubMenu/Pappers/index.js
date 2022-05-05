@@ -9,6 +9,7 @@ import {
   BluePapper,
   PinkPapper,
   PurplePapper,
+  BackIcon,
 } from '../../../assets/images';
 
 const Pappers = ({navigation}) => {
@@ -36,6 +37,7 @@ const Pappers = ({navigation}) => {
           navigation.goBack();
         }}
         title={'BACK'}
+        navImage={BackIcon}
       />
     </View>
   );
