@@ -3,6 +3,7 @@ import React from 'react';
 import SubHeader2 from '../../components/molecules/SubHeader2';
 import WhiteContainer from '../../components/molecules/WhiteContainer';
 import Button from '../../components/atoms/Button';
+import CheckBoxes from '../../components/atoms/Checkbox';
 
 const Overall = ({navigation}) => {
   return (
@@ -14,9 +15,21 @@ const Overall = ({navigation}) => {
         <WhiteContainer title={'CARD TEXT'} />
       </View>
       <View style={styles.price}>
-        <Text>Size S</Text>
-        <Text>Size M</Text>
-        <Text>Size L</Text>
+        <CheckBoxes />
+        <View style={styles.size}>
+          <Text>Size S</Text>
+          <Text>75k</Text>
+        </View>
+        <CheckBoxes />
+        <View style={styles.size}>
+          <Text>Size M</Text>
+          <Text>125k</Text>
+        </View>
+        <CheckBoxes />
+        <View style={styles.size}>
+          <Text>Size L</Text>
+          <Text>175k</Text>
+        </View>
       </View>
       <View style={styles.done}>
         <Button
@@ -43,11 +56,16 @@ const styles = StyleSheet.create({
   price: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginBottom: 50,
+    marginBottom: 70,
   },
   done: {
     paddingVertical: 10,
     backgroundColor: 'white',
     justifyContent: 'flex-end',
+  },
+  size: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingRight: 20,
   },
 });

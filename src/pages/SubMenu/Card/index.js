@@ -4,6 +4,7 @@ import SubHeader2 from '../../../components/molecules/SubHeader2';
 import Gap from '../../../components/atoms/Gap';
 import BottomNav from '../../../components/molecules/BottomNav';
 import Button from '../../../components/atoms/Button';
+import {BackIcon} from '../../../assets/images';
 
 const Card = ({navigation}) => {
   return (
@@ -29,6 +30,7 @@ const Card = ({navigation}) => {
           navigation.goBack();
         }}
         title={'BACK'}
+        navImage={BackIcon}
       />
     </View>
   );

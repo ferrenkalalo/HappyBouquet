@@ -35,9 +35,9 @@ const BouquetFlower = ({navigation}) => {
       </View>
       <BottomNav
         onPressed={() => navigation.navigate('BouquetFlower')}
-        // onPressed1={() => navigation.navigate('Ribbons')}
-        // onPressed2={() => navigation.navigate('Pappers')}
-        // onPressed3={() => navigation.navigate('Card')}
+        onPressed1={() => navigation.navigate('Ribbons')}
+        onPressed2={() => navigation.navigate('Pappers')}
+        onPressed3={() => navigation.navigate('Card')}
         navImage={FlowerNav}
         title={'FLOWERS'}
       />
