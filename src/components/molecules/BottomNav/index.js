@@ -1,43 +1,26 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import {RibbonNav, PapperNav, CardNav} from '../../../assets/images';
+import {useNavigation} from '@react-navigation/native';
 
-const BottomNav = ({
-  navigation,
-  onPressed,
-  title,
-  navImage,
-  onPressed1,
-  onPressed2,
-  onPressed3,
-}) => {
+const BottomNav = ({navigation, onPressed, navImage}) => {
+  navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onPressed}>
-        {/* <Text>{title}</Text> */}
         <Image source={navImage} style={styles.imageNav} />
       </TouchableOpacity>
 
-      <TouchableOpacity
-        //onPress={onPressed1}
-        onPress={() => navigation.navigate('Ribbons')}>
-        {/* <Text>RIBBONS</Text> */}
+      <TouchableOpacity onPress={() => navigation.navigate('Ribbons')}>
         <Image source={RibbonNav} style={styles.imageNav} />
       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={onPressed2}
-        //onPress={() => navigation.navigate('Pappers')}
-      >
-        {/* <Text>PAPPERS</Text> */}
+      <TouchableOpacity onPress={() => navigation.navigate('Pappers')}>
         <Image source={PapperNav} style={styles.imageNav} />
       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={onPressed3}
-        //onPress={() => navigation.navigate('Card')}
-      >
-        {/* <Text>CARD</Text> */}
+      <TouchableOpacity onPress={() => navigation.navigate('Card')}>
         <Image source={CardNav} style={styles.imageNav} />
       </TouchableOpacity>
     </View>

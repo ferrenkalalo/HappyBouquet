@@ -39,7 +39,11 @@ const SignIn = ({navigation}) => {
         onChangeText={text => setPassword(text)}
       />
       <Gap height={40} />
-      <Button title={'SIGN IN'} onPress={SignInUser} />
+      <Button
+        title={'SIGN IN'}
+        onPress={SignInUser}
+        //onPress={() => navigation.navigate('HomePage')}
+      />
       <Gap height={30} />
 
       <Button
