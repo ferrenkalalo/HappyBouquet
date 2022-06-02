@@ -12,7 +12,7 @@ const ProfilePage = ({navigation}) => {
     signOut(authentication)
       .then(re => {
         console.log(re);
-        navigation.navigate('SignIn');
+        navigation.replace('SignIn');
         alert('You are signed out');
       })
       .catch(err => {
